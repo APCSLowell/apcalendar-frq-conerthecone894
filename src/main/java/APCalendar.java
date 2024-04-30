@@ -66,6 +66,8 @@ public class APCalendar
     int days = dayOfYear(month, day, year);
 
     int dow = (fdow + days - 1) % 7;
+
+    return dow;
 //===========================================================
   }
 }
