@@ -65,16 +65,7 @@ public class APCalendar
     int fdow = firstDayOfYear(year);
     int days = dayOfYear(month, day, year);
 
-    int dow = fdow;
-
-    for(int i = 1; i <= days; i++){
-      dow++;
-
-      if(dow > 6)
-        dow = 0;
-    }
-
-    return dow;
+    int dow = (fdow + days - 1) % 7;
 //===========================================================
   }
 }
